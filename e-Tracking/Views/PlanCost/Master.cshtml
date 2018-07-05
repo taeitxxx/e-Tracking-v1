@@ -1,0 +1,1547 @@
+﻿@{
+    ViewBag.Title = "Plan Cost Matrix";
+    ViewBag.Description = "mockup ver.";
+}
+@section scripts {
+    <script>
+        $(function () {
+
+        });
+    </script>
+}
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="box box-default">
+            @*<div class="box-header">
+                    <h3 class="box-title">Plan Cost Matrix</h3>
+                </div>*@
+            <div class="box-body">
+                <div class="form-group row">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Incoterm</td>
+                                <th rowspan="2">Freight</th>
+                                <th colspan="2">CRA1 - Clearance</th>
+                                <th colspan="2">FRA1 - Freight</th>
+                                <th colspan="2">ILA1 - Inland</th>
+                                <th colspan="2">INA1 - Insurance</th>
+                                <th colspan="2">ZOA1 - Customs</th>
+                            </tr>
+                            <tr>
+                                <th>Option</th>
+                                <th>Formula</th>
+                                <th>Option</th>
+                                <th>Formula</th>
+                                <th>Option</th>
+                                <th>Formula</th>
+                                <th>Option</th>
+                                <th>Formula</th>
+                                <th>Option</th>
+                                <th>Formula</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <th scope="row" rowspan="2">CFR</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">CIF</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">CIP</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">CPT</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">DAF</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">DAP</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">DAT</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">DDP</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">DDU</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">DEQ</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">DES</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">EXW</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">FAS</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">FCA</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">FH</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">FOB</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row" rowspan="2">UN</th>
+                                <td>Sea</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td>Air</td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRAir_FRA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_FRA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ILA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ILA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_INA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_INA" placeholder="formula" style="width:100%"></td>
+                                <td>
+                                    <select class="custom-select my-1 mr-sm-2" id="optCFRSea_ZOA">
+                                        <option selected>Choose...</option>
+                                        <option value="0">Percent</option>
+                                        <option value="1">Value</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" id="fmlCFRSea_CRA_ZOA" placeholder="formula" style="width:100%"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

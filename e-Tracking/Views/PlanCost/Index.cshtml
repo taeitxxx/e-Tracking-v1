@@ -1,0 +1,205 @@
+﻿@using e_Tracking.Models;
+@model PlanCostViewModel
+
+@{
+    ViewBag.Title = "Plan Cost Calculator";
+    ViewBag.Description = "mockup ver.";
+}
+@section scripts {
+    <script>
+        $(function () {
+            $("#divfciOption").hide();
+            $("#inputIncoTerm").change(function () {
+                var id = this.value;
+                if (id == 12) {
+                    $("#divCTN").show();
+                    $("#divZone").show();
+                    $("#divfciOption").show(500);
+                }
+                else if (id == 0) {
+                    $("#divCTN").hide();
+                    $("#divZone").hide();
+                    $("#divfciOption").hide(500);
+                }
+                else {
+                    $("#divCTN").hide();
+                    $("#divZone").hide();
+                    $("#divfciOption").show(500);
+                }
+
+            });
+        });
+    </script>
+}
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="box box-default">
+            @*<div class="box-header">
+                    <h3 class="box-title">Plan Cost Calculator</h3>
+                </div>*@
+            <div class="box-body">
+                <div class="form-inline row" style="padding-bottom:15px">
+                    <label for="inputDescGood" class="col-sm-2 col-form-label">Description of goods</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputDescGood" placeholder="Description of goods" style="width:80%">
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span> Search Tariff
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputGoodValue" class="col-sm-2 col-form-label">Good Values</label>
+                    <div class="col-sm-4 form-inline">
+                        <input type="number" class="form-control" id="inputGoodValue" placeholder="Good Values">
+                        @Html.DropDownList("All_Currencies", Model.All_Currencies)
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputWeight" class="col-sm-2 col-form-label">Weight</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="inputWeight" placeholder="Weight">
+                    </div>
+                </div>
+                <br />
+                <div class="form-group row">
+                    <label for="inputIncoTerm" class="col-sm-2 col-form-label">Incoterm</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select my-1 mr-sm-2" id="inputIncoTerm" name="inputIncoTerm">
+                            <option value="0" selected>Choose...</option>
+                            <option value="1">CFR</option>
+                            <option value="2">CIF</option>
+                            <option value="3">CIP</option>
+                            <option value="4">CPT</option>
+                            <option value="5">DAF</option>
+                            <option value="6">DAP</option>
+                            <option value="7">DAT</option>
+                            <option value="8">DDP</option>
+                            <option value="9">DDU</option>
+                            <option value="10">DEQ</option>
+                            <option value="11">DES</option>
+                            <option value="12">EXW</option>
+                            <option value="13">FAS</option>
+                            <option value="14">FCA</option>
+                            <option value="15">FH</option>
+                            <option value="16">FOB</option>
+                            <option value="17">UN</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="divfciOption">
+    <div class="col-xs-12 col-md-12">
+        <div class="box box-warning">
+            <div class="box-header">
+                <h3 class="box-title">Freight, Customs and Inland Options</h3>
+            </div>
+            <div class="box-body">
+                <div class="form-group row" id="divCTN">
+                    <label for="inputByCTN" class="col-sm-2 col-form-label">By Container</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select my-1 mr-sm-2" id="inputByCTN">
+                            <option selected>Choose...</option>
+                            <option value="20ft">20FT</option>
+                            <option value="40ft">40FT</option>
+                            <option value="45ft">45FT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row" id="divVol">
+                    <label for="inputByVol" class="col-sm-2 col-form-label">By Volume</label>
+                    <div class="col-sm-4 form-inline">
+                        <input type="number" class="form-control" id="inputByVol" placeholder="vol.">&nbsp&nbsp m<sup>3</sup>
+                    </div>
+                </div>
+                <div class="form-group row" id="divCountry">
+                    <label for="inputByCountry" class="col-sm-2 col-form-label">Country</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select my-1 mr-sm-2" id="inputByCountry">
+                            <option selected>Choose...</option>
+                            <option value="1">Country1</option>
+                            <option value="2">Country2</option>
+                            <option value="3">Country3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <button type="button" class="btn  btn-primary">Calculate</button>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="box box-success">
+            <div class="box-header">
+                <h3 class="box-title">Estimate plan cost</h3>
+            </div>
+            <div class="box-body">
+                <div class="form-group row">
+                    <label for="inputCustomCost" class="col-xs-2 col-sm-2 col-form-label">Custom Cost</label>
+                    <div class="col-xs-4 col-sm-4">
+                        <input type="number" class="form-control" id="inputCustomCost">
+                        <div style="color:gray">
+                            Goods value x Tariff Rate
+                        </div>
+                    </div>
+                    <label for="inputTariffRate" class="col-xs-2 col-sm-2 col-form-label">Tariff Rate</label>
+                    <div class="col-xs-4 col-sm-4">
+                        <input type="number" class="form-control" id="inputTariffRate" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputFreightCost" class="col-xs-2 col-sm-2 col-form-label">Freight Cost</label>
+                    <div class="col-xs-10 col-sm-4">
+                        <input type="number" class="form-control" id="inputFreightCost">
+                        <div style="color:gray">
+                            formula
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputInsurance" class="col-xs-2 col-sm-2 col-form-label">Insurance</label>
+                    <div class="col-xs-10 col-sm-4">
+                        <input type="number" class="form-control" id="inputInsurance">
+                        <div style="color:gray">
+                            formula
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputClearanceCost" class="col-xs-2 col-sm-2 col-form-label">Clearance Cost</label>
+                    <div class="col-xs-10 col-sm-4">
+                        <input type="number" class="form-control" id="inputClearanceCost">
+                        <div style="color:gray">
+                            formula
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputInlandCost" class="col-xs-2 col-sm-2 col-form-label">Inland Cost</label>
+                    <div class="col-xs-10 col-sm-4">
+                        <input type="number" class="form-control" id="inputInlandCost">
+                        <div style="color:gray">
+                            formula
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputTotal" class="col-xs-2 col-sm-2 col-form-label">Total</label>
+                    <div class="col-xs-10 col-sm-4">
+                        <input type="number" class="form-control" id="inputTotal" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
