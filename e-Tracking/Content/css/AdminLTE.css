@@ -4994,3 +4994,21 @@ table.text-center th {
     white-space: normal !important;
   }
 }
+
+/*------------------- Myyyy Test -------------------*/
+.setWidth {
+    width:auto;
+}
+
+.setWidthFormula {
+    width: 180px;
+}
+
+.box-body {
+    max-width: 100%;
+    max-height: 500px;
+    overflow-x: auto;
+}
+
+
+
