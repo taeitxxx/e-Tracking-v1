@@ -5004,11 +5004,5 @@ table.text-center th {
     width: 180px;
 }
 
-.box-body {
-    max-width: 100%;
-    max-height: 500px;
-    overflow-x: auto;
-}
-
 
 
