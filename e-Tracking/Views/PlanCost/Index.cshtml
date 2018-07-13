@@ -41,81 +41,83 @@
                 <div class="form-group row" style="padding-bottom:15px;">
                     <label for="inputDescGood" class="col-sm-2 col-form-label">Description of goods</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="inputDescGood" placeholder="Description of goods" style="width:80%">
+                        <input type="text" class="form-control" id="inputDescGood" placeholder="Description of goods">
 
                     </div>
-                    <button type="button" class="btn btn-default" style="margin-left: -80px;">
-                        <span><img src="\Content\img\icon\search-icon.png" width="15" style="margin-top:-4px;" /></span> Search Tariff
-                    </button>
-
-                </div>
-                <div class="form-group row">
-                    <label for="inputGoodValue" class="col-sm-2 col-form-label">Good Values</label>
-                    <div class="col-sm-4 form-inline">
-                        <input type="number" class="form-control" id="inputGoodValue" placeholder="Good Values" style="margin-right: 10px;">
-                        @Html.DropDownList("All_Currencies", Model.All_Currencies)
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputWeight" class="col-sm-2 col-form-label">Weight</label>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control" id="inputWeight" placeholder="Weight" min="0" style="width: 200px;">
+                        <button type="button" class="btn btn-default">
+                            <span><img src="\Content\img\icon\search-icon.png" width="15" style="margin-top:-4px;" /></span> Search Tariff
+                        </button>
                     </div>
-                </div>
-                <br />
-                <div class="form-group row">
-                    <label for="inputIncoTerm" class="col-sm-2 col-form-label">Incoterm</label>
-                    <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2 setWidth" id="inputIncoTerm" name="inputIncoTerm">
-                            <option value="0" selected>Choose...</option>
-                            <option value="1">CFR</option>
-                            <option value="2">CIF</option>
-                            <option value="3">CIP</option>
-                            <option value="4">CPT</option>
-                            <option value="5">DAF</option>
-                            <option value="6">DAP</option>
-                            <option value="7">DAT</option>
-                            <option value="8">DDP</option>
-                            <option value="9">DDU</option>
-                            <option value="10">DEQ</option>
-                            <option value="11">DES</option>
-                            <option value="12">EXW</option>
-                            <option value="13">FAS</option>
-                            <option value="14">FCA</option>
-                            <option value="15">FH</option>
-                            <option value="16">FOB</option>
-                            <option value="17">UN</option>
-                        </select>
-                    </div>
-                </div>
 
-                <div class="form-group row" id="divCountry">
-                    <label for="inputByCountry" class="col-sm-2 col-form-label">Country</label>
-                    <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2 setWidth" id="inputByCountry">
-                            <option selected>Choose...</option>
-                            <option value="1">Country1</option>
-                            <option value="2">Country2</option>
-                            <option value="3">Country3</option>
-                        </select>
-                        <label style="color:gray">
-                            Zone 1
-                        </label>
                     </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="Freight" class="col-sm-2 col-form-label">Freight</label>
-                    <div class="col-sm-10">
-                        <select class="custom-select my-1 mr-sm-2 setWidth" id="inputFreight" name="inputFreight">
-                            <option value="0" selected>Choose...</option>
-                            <option value="1">Air</option>
-                            <option value="2">Sea</option>
-                        </select>
+                    <div class="form-group row">
+                        <label for="inputGoodValue" class="col-sm-2 col-form-label">Good Values</label>
+                        <div class="col-sm-4 form-inline">
+                            <input type="number" class="form-control" id="inputGoodValue" placeholder="Good Values" style="margin-right: 10px;">
+                            @Html.DropDownList("All_Currencies", Model.All_Currencies)
+                        </div>
                     </div>
-                </div>
+                    <div class="form-group row">
+                        <label for="inputWeight" class="col-sm-2 col-form-label">Weight</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" id="inputWeight" placeholder="Weight" min="0" style="width: 200px;">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group row">
+                        <label for="inputIncoTerm" class="col-sm-2 col-form-label">Incoterm</label>
+                        <div class="col-sm-10">
+                            <select class="custom-select my-1 mr-sm-2 setWidth" id="inputIncoTerm" name="inputIncoTerm">
+                                <option value="0" selected>Choose...</option>
+                                <option value="1">CFR</option>
+                                <option value="2">CIF</option>
+                                <option value="3">CIP</option>
+                                <option value="4">CPT</option>
+                                <option value="5">DAF</option>
+                                <option value="6">DAP</option>
+                                <option value="7">DAT</option>
+                                <option value="8">DDP</option>
+                                <option value="9">DDU</option>
+                                <option value="10">DEQ</option>
+                                <option value="11">DES</option>
+                                <option value="12">EXW</option>
+                                <option value="13">FAS</option>
+                                <option value="14">FCA</option>
+                                <option value="15">FH</option>
+                                <option value="16">FOB</option>
+                                <option value="17">UN</option>
+                            </select>
+                        </div>
+                    </div>
 
-            </div>
+                    <div class="form-group row" id="divCountry">
+                        <label for="inputByCountry" class="col-sm-2 col-form-label">Country</label>
+                        <div class="col-sm-10">
+                            <select class="custom-select my-1 mr-sm-2 setWidth" id="inputByCountry">
+                                <option selected>Choose...</option>
+                                <option value="1">Country1</option>
+                                <option value="2">Country2</option>
+                                <option value="3">Country3</option>
+                            </select>
+                            <label style="color:gray">
+                                Zone 1
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="Freight" class="col-sm-2 col-form-label">Freight</label>
+                        <div class="col-sm-10">
+                            <select class="custom-select my-1 mr-sm-2 setWidth" id="inputFreight" name="inputFreight">
+                                <option value="0" selected>Choose...</option>
+                                <option value="1">Air</option>
+                                <option value="2">Sea</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
         </div>
     </div>
 </div>
@@ -128,15 +130,6 @@
             </div>
             <div class="box-body">
                 <div class="form-group row" id="divCTN">
-                    @*<label for="inputByCTN" class="col-sm-2 col-form-label">By Container</label>
-        <div class="col-sm-10 form-group row">
-            <label class="col-sm-2 col-form-control">20 FT</label>
-            <input type="number" class="form-control col-sm-2" id="inputcontainer20" placeholder="unit">
-            <label style="margin-left:20px;">unit</label>
-            <label style="margin-right:20px; margin-left:60px;">40 FT</label>
-            <input type="number" class="form-control" id="inputcontainer40" placeholder="unit">
-            <label style="margin-left:20px;">unit</label>
-        </div>*@
                     <label for="inputByCTN" class="col-sm-2 col-form-label">By Container</label>
 
                     <div class="col-sm-4 form-group row" style="margin-left:-85px;">
