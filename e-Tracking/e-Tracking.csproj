@@ -19,7 +19,7 @@
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.9</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,6 +40,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -55,6 +63,8 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
@@ -140,6 +150,17 @@
     <Content Include="Content\img\user2.jpg" />
     <Content Include="Content\img\user4-128x128.jpg" />
     <Content Include="Content\js\site.js" />
+    <Content Include="eTracking.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>eTracking.Context.cs</LastGenOutput>
+      <DependentUpon>eTracking.edmx</DependentUpon>
+    </Content>
+    <Content Include="eTracking.edmx.sql" />
+    <Content Include="eTracking.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>eTracking.cs</LastGenOutput>
+      <DependentUpon>eTracking.edmx</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -246,6 +267,14 @@
     <Content Include="Content\bootstrap\bootstrap.scss" />
     <Content Include="Content\bootstrap\bootstrap-reboot.scss" />
     <Content Include="Content\bootstrap\bootstrap-grid.scss" />
+    <EntityDeploy Include="eTracking.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>eTracking.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="eTracking.edmx.diagram">
+      <DependentUpon>eTracking.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\public.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -259,7 +288,9 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\css\progress-tracker\_progress-tracker-animations.scss" />
     <Content Include="Content\css\progress-tracker\_progress-tracker-theme.scss" />
     <Content Include="Content\css\progress-tracker\_progress-tracker-variables.scss" />
@@ -278,8 +309,6 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\PlanCost\Index.cshtml" />
-    <Content Include="Views\PlanCost\Master.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -288,11 +317,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\PlanCostController.cs" />
-    <Compile Include="Models\PlanCostViewModel.cs" />
+    <Compile Include="Bussiness\CommentAppService.cs" />
+    <Compile Include="Bussiness\FollowAppServ.cs" />
+    <Compile Include="Comment.cs">
+      <DependentUpon>eTracking.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Comment.cs" />
+    <Compile Include="eTracking.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eTracking.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eTracking.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eTracking.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eTracking.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eTracking.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="tbfollowing.cs">
+      <DependentUpon>eTracking.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -418,13 +471,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\img\icon\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
