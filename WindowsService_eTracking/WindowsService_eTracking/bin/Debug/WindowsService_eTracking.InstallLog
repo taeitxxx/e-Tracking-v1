@@ -1,0 +1,201 @@
+﻿Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Creating EventLog source e-Tracking Service in log Application...
+Rolling back assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Restoring event log to previous state for source e-Tracking Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Creating EventLog source e-Tracking Service in log Application...
+Rolling back assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Restoring event log to previous state for source e-Tracking Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Service e-Tracking Service has been successfully installed.
+Creating EventLog source e-Tracking Service in log Application...
+Committing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Creating EventLog source e-Tracking Service in log Application...
+Rolling back assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Restoring event log to previous state for source e-Tracking Service.
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Creating EventLog source e-Tracking Service in log Application...
+Rolling back assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Restoring event log to previous state for source e-Tracking Service.
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Creating EventLog source e-Tracking Service in log Application...
+Rolling back assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Restoring event log to previous state for source e-Tracking Service.
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Creating EventLog source e-Tracking Service in log Application...
+Rolling back assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Restoring event log to previous state for source e-Tracking Service.
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Creating EventLog source e-Tracking Service in log Application...
+Rolling back assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Restoring event log to previous state for source e-Tracking Service.
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Service e-Tracking Service has been successfully installed.
+Creating EventLog source e-Tracking Service in log Application...
+Committing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Service e-Tracking Service has been successfully installed.
+Creating EventLog source e-Tracking Service in log Application...
+Committing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Service e-Tracking Service has been successfully installed.
+Creating EventLog source e-Tracking Service in log Application...
+Committing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Service e-Tracking Service has been successfully installed.
+Creating EventLog source e-Tracking Service in log Application...
+Committing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Service e-Tracking Service has been successfully installed.
+Creating EventLog source e-Tracking Service in log Application...
+Committing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Service e-Tracking Service has been successfully installed.
+Creating EventLog source e-Tracking Service in log Application...
+Committing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+Installing service e-Tracking Service...
+Service e-Tracking Service has been successfully installed.
+Creating EventLog source e-Tracking Service in log Application...
+Committing assembly 'C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.InstallLog
+   assemblypath = C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe

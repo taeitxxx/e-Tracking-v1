@@ -1,0 +1,8 @@
+c:\users\ajnaj\documents\visual studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe
+C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.exe.config
+C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\obj\Debug\WindowsService_eTracking.ProjectInstaller.resources
+C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\obj\Debug\WindowsService_eTracking.csproj.GenerateResource.Cache
+C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\obj\Debug\WindowsService_eTracking.exe
+C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\obj\Debug\WindowsService_eTracking.pdb
+C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\bin\Debug\WindowsService_eTracking.pdb
+C:\Users\ajnaj\Documents\Visual Studio 2015\Projects\WindowsService_eTracking\WindowsService_eTracking\obj\Debug\WindowsService_eTracking.csprojResolveAssemblyReference.cache
